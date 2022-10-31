@@ -8,7 +8,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: BoundedContext281
+        - id: bc
           uri: http://localhost:8081
           predicates:
             - Path=/as/**, 
@@ -35,8 +35,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: BoundedContext281
-          uri: http://boundedContext281:8080
+        - id: bc
+          uri: http://bc:8080
           predicates:
             - Path=/as/**, 
         - id: frontend

@@ -1,6 +1,6 @@
 package commit.test.aaaa.infra;
 
-import commit.test.aaaa.BoundedContext281Application;
+import commit.test.aaaa.BcApplication;
 import commit.test.aaaa.config.kafka.KafkaProcessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -32,7 +32,7 @@ public class AbstractEvent {
         /**
          * spring streams 방식
          */
-        KafkaProcessor processor = BoundedContext281Application.applicationContext.getBean(
+        KafkaProcessor processor = BcApplication.applicationContext.getBean(
             KafkaProcessor.class
         );
         MessageChannel outputChannel = processor.outboundTopic();

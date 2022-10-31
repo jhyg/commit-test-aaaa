@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: BoundedContext281
+  name: bc
   labels:
-    app: BoundedContext281
+    app: bc
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: BoundedContext281
+      app: bc
   template:
     metadata:
       labels:
-        app: BoundedContext281
+        app: bc
     spec:
       containers:
-        - name: BoundedContext281
-          image: username/BoundedContext281:latest
+        - name: bc
+          image: username/bc:latest
           ports:
             - containerPort: 8080
           readinessProbe:

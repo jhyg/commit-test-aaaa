@@ -1,6 +1,6 @@
 package commit.test.aaaa.domain;
 
-import commit.test.aaaa.BoundedContext281Application;
+import commit.test.aaaa.BcApplication;
 import javax.persistence.*;
 import java.util.List;
 import lombok.Data;
@@ -27,7 +27,7 @@ public class A  {
     }
 
     public static ARepository repository(){
-        ARepository aRepository = BoundedContext281Application.applicationContext.getBean(ARepository.class);
+        ARepository aRepository = BcApplication.applicationContext.getBean(ARepository.class);
         return aRepository;
     }
 
